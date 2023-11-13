@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+    tools {
+        nodejs '20.9.0'
+        // nodejs '14.17.3'
+    }
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+                sh 'npm version'
+            }
+        }
+    }
+}
