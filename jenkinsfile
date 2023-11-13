@@ -5,10 +5,14 @@ pipeline {
         // nodejs '14.17.3'
     }
     stages {
-        stage('Hello') {
+        stage('Hello from echo') {
             steps {
                 echo 'Hello World'
-                sh 'npm version'
+            }
+        }
+        stage('Hello from node') {
+            steps {
+                sh 'node app.js'
             }
         }
     }
