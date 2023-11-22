@@ -15,5 +15,10 @@ pipeline {
                 sh 'node app.js'
             }
         }
+        stage("build project"){
+            steps {
+                sh 'node app.js'
+            }
+        }
     }
 }
